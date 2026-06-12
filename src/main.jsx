@@ -3,12 +3,19 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import NavBar from './components/navBar/NavBar';
+import RootLayout from './layout/RootLayout';
+import HomePage from './pages/homePage/HomePage';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <NavBar/>,
+    element: <RootLayout/>,
+    children: [
+      {
+        index: true,
+        element: <HomePage />
+      }
+    ]
   }
 ])
 
