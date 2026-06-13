@@ -1,6 +1,6 @@
 import { RiHome2Line, RiTimeLine } from "react-icons/ri";
 import { TfiStatsUp } from "react-icons/tfi";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 
 const NavBar = () => {
   return (
@@ -12,20 +12,20 @@ const NavBar = () => {
           </h3>
         </div>
         <ul className="flex gap-4">
-          <li className="text-[#1F2937] hover:text-[#244D3F] cursor-pointer flex items-center gap-1">
-            <NavLink to="/">
+          <li className="text-[#1F2937] hover:text-[#244D3F] cursor-pointer">
+            <NavLink className="flex items-center gap-1" to="/">
               <RiHome2Line />
               Home
             </NavLink>
           </li>
           <li className="text-[#1F2937] hover:text-[#244D3F] cursor-pointer flex items-center gap-1">
-            <NavLink to="/timeline">
+            <NavLink className="flex items-center gap-1" to="/timeline">
               <RiTimeLine />
               Timeline
             </NavLink>
           </li>
           <li className="text-[#1F2937] hover:text-[#244D3F] cursor-pointer flex items-center gap-1">
-            <NavLink to="/stats">
+            <NavLink className="flex items-center gap-1" to="/stats">
               <TfiStatsUp />
               Stats
             </NavLink>
