@@ -13,13 +13,13 @@ const NavBar = () => {
         </div>
         <ul className="flex gap-4">
           <li className="text-[#1F2937] hover:text-[#244D3F] cursor-pointer">
-            <MyNavLink to={"/"}><RiHome2Line />Home</MyNavLink>
+            <MyNavLink to={"/"}><RiHome2Line size={16} />Home</MyNavLink>
           </li>
           <li className="text-[#1F2937] hover:text-[#244D3F] cursor-pointer flex items-center gap-1">
-            <MyNavLink to={"/timeline"}><RiTimeLine />Timeline</MyNavLink>
+            <MyNavLink to={"/timeline"}><RiTimeLine size={16} />Timeline</MyNavLink>
           </li>
           <li className="text-[#1F2937] hover:text-[#244D3F] cursor-pointer flex items-center gap-1">
-            <MyNavLink to={"/stats"}><TfiStatsUp />Stats</MyNavLink>
+            <MyNavLink to={"/stats"}><TfiStatsUp size={16} />Stats</MyNavLink>
           </li>
         </ul>
       </div>
