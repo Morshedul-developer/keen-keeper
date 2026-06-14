@@ -1,6 +1,5 @@
 import { RiHome2Line, RiTimeLine } from "react-icons/ri";
 import { TfiStatsUp } from "react-icons/tfi";
-import { NavLink } from "react-router";
 import MyNavLink from "../myNavLink/MyNavLink";
 
 const NavBar = () => {
