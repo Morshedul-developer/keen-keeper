@@ -3,7 +3,7 @@ import SummaryCard from "../ui/SummaryCard";
 
 const Banner = () => {
   return (
-    <div className="max-w-6xl mx-auto py-10 md:py-20">
+    <div>
       <div className="text-center space-y-4">
         <h1 className="text-5xl font-bold">Friends to keep close in your life</h1>
       <p className="text-[#64748B] max-w-xl mx-auto">
