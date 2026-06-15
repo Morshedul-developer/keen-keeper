@@ -5,10 +5,10 @@ const FriendCard = ({ friend }) => {
         <img
           src={friend.picture}
           alt={friend.name}
-          className="rounded-full object-cover mx-auto"
+          className="rounded-full w-25 object-cover mx-auto"
         />
       </figure>
-      <div className="text-center space-y-2">
+      <div className="text-center space-y-3">
         <h2 className="font-semibold text-lg">{friend.name}</h2>
         <p className="text-sm text-gray-500">
           {friend.days_since_contact}d ago
