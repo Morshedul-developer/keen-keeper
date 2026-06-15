@@ -10,7 +10,7 @@ const NavBar = () => {
     { name: "Stats", icon: <TfiStatsUp size={16} />, path: "/stats" },
   ];
   return (
-    <nav className="shadow-md">
+    <nav className="border-b border-[#E2E8F0]">
       <div className="flex items-center justify-between p-4 max-w-7xl mx-auto">
         <div>
           <h3 className="text-xl font-bold text-[#1F2937]">
