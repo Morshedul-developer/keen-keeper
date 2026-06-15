@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className="border-t border-white/20 my-8" />
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-center md:justify-between flex-wrap gap-4">
             <p className="text-white/60 font-light">
                 &copy; 2024 KeenKeeper. All rights reserved.
             </p>
