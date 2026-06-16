@@ -9,7 +9,7 @@ import { useContext } from "react";
 import { FriendsContext } from "../../context/FriendContext";
 
 const FriendDetails = () => {
-  const {fnd, setFnd} = useContext(FriendsContext);
+  const {handleClick} = useContext(FriendsContext);
   const { friendId } = useParams();
   const { friends, loading } = useFriends();
   const expectedFriend = friends.find(
@@ -22,14 +22,11 @@ const FriendDetails = () => {
       </div>
     );
   }
-  const handleClick = (fd,str) => {
-    fd.event=str;
-    setFnd([...fnd, fd]);
-  }
+  
   return (
     <div className="bg-[#F8FAFC] py-10 md:py-20">
-      <div className="max-w-6xl mx-auto grid grid-cols-12 grid-rows-7 gap-6">
-        <div className="col-span-3 row-span-4 shadow-sm rounded-lg p-6 text-center space-y-2">
+      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 xl:grid-rows-7 gap-6">
+        <div className="col-span-1 md:col-span-3 xl:col-span-3 xl:row-span-4 shadow-sm rounded-lg p-6 text-center space-y-2">
           <img
             src={expectedFriend?.picture}
             alt={expectedFriend?.name}
@@ -56,17 +53,17 @@ const FriendDetails = () => {
           </p>
           <p className="text-[12px] text-[#64748B]">{expectedFriend?.email}</p>
         </div>
-        <div className="col-span-3 row-span-2 shadow-sm rounded-lg text-center space-y-2 flex flex-col justify-center items-center">
+        <div className="col-span-1 md:col-span-3 xl:col-span-3 xl:row-span-2 shadow-sm rounded-lg text-center space-y-2 flex flex-col justify-center items-center py-6">
           <strong className="text-3xl">
             {expectedFriend?.days_since_contact}
           </strong>
           <p className="text-[#64748B]">Days Since Contact</p>
         </div>
-        <div className="col-span-3 row-span-2 shadow-sm rounded-lg text-center space-y-2 flex flex-col justify-center items-center">
+        <div className="col-span-1 md:col-span-3 xl:col-span-3 xl:row-span-2 shadow-sm rounded-lg text-center space-y-2 flex flex-col justify-center items-center py-6">
           <strong className="text-3xl">{expectedFriend?.goal}</strong>
           <p className="text-[#64748B]">Goal (Days)</p>
         </div>
-        <div className="col-span-3 row-span-2 shadow-sm rounded-lg text-center space-y-2 flex flex-col justify-center items-center">
+        <div className="col-span-1 md:col-span-3 xl:col-span-3 xl:row-span-2 shadow-sm rounded-lg text-center space-y-2 flex flex-col justify-center items-center py-6">
           <strong className="text-3xl">
             {new Date(expectedFriend?.next_due_date).toLocaleDateString(
               "en-US",
@@ -79,7 +76,7 @@ const FriendDetails = () => {
           </strong>
           <p className="text-[#64748B]">Next Due</p>
         </div>
-        <div className="col-span-9 row-span-2 shadow-sm rounded-lg p-6 space-y-2">
+        <div className="col-span-1 md:col-span-6 xl:col-span-9 xl:row-span-2 shadow-sm rounded-lg p-6 space-y-2">
           <div className="flex justify-between items-center">
             <p className="text-xl font-semibold">Relationship Goal</p>
             <button className="btn bg-[#F8FAFC] hover:bg-[#E2E8F0]">
@@ -93,13 +90,13 @@ const FriendDetails = () => {
             </span>
           </p>
         </div>
-        <button className="btn col-span-3 h-full row-span-1 text-[16px] bg-[#F8FAFC] hover:bg-[#E2E8F0] gap-2">
+        <button className="btn col-span-1 md:col-span-3 xl:col-span-3 xl:row-span-1 min-h-16 xl:h-full text-[16px] bg-[#F8FAFC] hover:bg-[#E2E8F0] gap-2">
           <RiNotificationSnoozeLine size={20} />
           Snooze 2 weeks
         </button>
-        <div className="col-span-9 row-span-3 shadow-sm rounded-lg p-6 space-y-4">
+        <div className="col-span-1 md:col-span-6 xl:col-span-9 xl:row-span-3 shadow-sm rounded-lg p-6 space-y-4">
           <p className="text-xl font-semibold">Quick Check-In</p>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <button onClick={() => handleClick(expectedFriend,"call")} className="btn h-32 flex-col bg-[#F8FAFC] hover:bg-[#E2E8F0] text-[16px] gap-2">
               <PiPhoneCallBold size={30} />
               Call
@@ -114,11 +111,11 @@ const FriendDetails = () => {
             </button>
           </div>
         </div>
-        <button className="btn col-span-3 h-full row-span-1 text-[16px] bg-[#F8FAFC] hover:bg-[#E2E8F0] gap-2">
+        <button className="btn col-span-1 md:col-span-3 xl:col-span-3 xl:row-span-1 min-h-16 xl:h-full text-[16px] bg-[#F8FAFC] hover:bg-[#E2E8F0] gap-2">
           <FiArchive size={17} />
           Archive
         </button>
-        <button className="btn col-span-3 h-full row-span-1 text-[16px] bg-[#F8FAFC] hover:bg-[#E2E8F0] gap-2">
+        <button className="btn col-span-1 md:col-span-3 xl:col-span-3 xl:row-span-1 min-h-16 xl:h-full text-[16px] bg-[#F8FAFC] hover:bg-[#E2E8F0] gap-2">
           <RiDeleteBinLine size={20} />
           Delete
         </button>

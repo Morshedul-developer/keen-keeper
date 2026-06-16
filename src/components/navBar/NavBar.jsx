@@ -2,6 +2,7 @@ import { RiHome2Line, RiTimeLine } from "react-icons/ri";
 import { TfiStatsUp } from "react-icons/tfi";
 import MyNavLink from "../myNavLink/MyNavLink";
 import { TiThMenu } from "react-icons/ti";
+import { Link } from "react-router";
 
 const NavBar = () => {
   const navItems = [
@@ -13,9 +14,9 @@ const NavBar = () => {
     <nav className="border-b border-[#E2E8F0]">
       <div className="flex items-center justify-between p-4 max-w-7xl mx-auto">
         <div>
-          <h3 className="text-xl font-bold text-[#1F2937]">
+          <Link to={'/'}><h3 className="text-xl font-bold text-[#1F2937] cursor-pointer">
             Keen<span className="font-semibold text-[#244D3F]">Keeper</span>
-          </h3>
+          </h3></Link>
         </div>
         <div className="md:hidden">
           <TiThMenu size={20} />
