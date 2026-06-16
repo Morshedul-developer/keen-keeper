@@ -10,8 +10,9 @@ const TimeLine = () => {
         <h2 className="text-4xl font-bold">Timeline</h2>
         <select defaultValue="Pick a color" className="select appearance-none">
           <option disabled={true}>Filter timeline</option>
-          <option>Newest</option>
-          <option>Oldest</option>
+          <option>Call</option>
+          <option>Text</option>
+          <option>Video</option>
         </select>
         {fnd.map((fd) => (
           <TimelineCard key={fd.id} fd={fd}/>
