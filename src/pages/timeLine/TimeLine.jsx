@@ -4,7 +4,6 @@ import TimelineCard from "../../components/ui/TimelineCard";
 
 const TimeLine = () => {
   const { fnd } = useContext(FriendsContext);
-  console.log(fnd);
   return (
     <div className="bg-[#F8FAFC] py-10 md:py-20">
       <div className="max-w-6xl mx-auto space-y-6">
