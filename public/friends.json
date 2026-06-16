@@ -20,7 +20,7 @@
     "status": "almost due",
     "tags": ["work", "mentor"],
     "bio": "Former team lead who often shares career advice and industry insights.",
-    "goal": 14,
+    "goal": 21,
     "next_due_date": "2026-06-18"
   },
   {
@@ -32,7 +32,7 @@
     "status": "on-track",
     "tags": ["gym", "fitness"],
     "bio": "Workout partner who motivates everyone to stay consistent with fitness goals.",
-    "goal": 14,
+    "goal": 7,
     "next_due_date": "2026-06-24"
   },
   {
@@ -44,7 +44,7 @@
     "status": "overdue",
     "tags": ["travel", "close friend"],
     "bio": "Travel companion for several backpacking trips across Southeast Asia.",
-    "goal": 14,
+    "goal": 30,
     "next_due_date": "2026-06-07"
   },
   {
@@ -68,7 +68,7 @@
     "status": "on-track",
     "tags": ["book club", "college"],
     "bio": "Avid reader who introduced me to many great non-fiction books.",
-    "goal": 14,
+    "goal": 10,
     "next_due_date": "2026-06-22"
   },
   {
@@ -80,7 +80,7 @@
     "status": "overdue",
     "tags": ["gaming", "childhood friend"],
     "bio": "We've known each other since school and still enjoy online gaming sessions.",
-    "goal": 14,
+    "goal": 28,
     "next_due_date": "2026-06-14"
   },
   {
@@ -92,7 +92,7 @@
     "status": "on-track",
     "tags": ["photography", "creative"],
     "bio": "Talented photographer who loves organizing photo walks around the city.",
-    "goal": 14,
+    "goal": 12,
     "next_due_date": "2026-06-19"
   },
   {
@@ -104,7 +104,7 @@
     "status": "almost due",
     "tags": ["football", "neighbor"],
     "bio": "Neighborhood friend who organizes weekly football matches.",
-    "goal": 14,
+    "goal": 18,
     "next_due_date": "2026-06-15"
   },
   {
@@ -116,7 +116,7 @@
     "status": "on-track",
     "tags": ["volunteering", "community"],
     "bio": "Met while volunteering at a local community education program.",
-    "goal": 14,
+    "goal": 7,
     "next_due_date": "2026-06-25"
   },
   {
@@ -128,7 +128,7 @@
     "status": "overdue",
     "tags": ["freelancing", "developer"],
     "bio": "Fellow web developer who frequently exchanges freelancing tips and client strategies.",
-    "goal": 14,
+    "goal": 25,
     "next_due_date": "2026-06-09"
   },
   {
