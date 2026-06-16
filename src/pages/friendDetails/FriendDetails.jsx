@@ -17,16 +17,18 @@ const FriendDetails = () => {
   }
   return (
     <div className="bg-[#F8FAFC] py-10 md:py-20">
-      <div className="max-w-6xl mx-auto">
-        <div>
-          <h1 className="text-3xl font-bold mb-4">{expectedFriend.name}</h1>
-          <img
-            src={expectedFriend.picture}
-            alt={expectedFriend.name}
-            className="rounded-full w-32 h-32 object-cover mx-auto"
-          />
-          <p className="text-lg mt-4">{expectedFriend.bio}</p>
+      <div className="max-w-6xl mx-auto grid grid-cols-12 grid-rows-7 gap-6">
+        <div className="col-span-3 row-span-4 border p-6">
+          <img src={expectedFriend?.picture} alt={expectedFriend?.name} className="w-full h-full object-cover" />
         </div>
+        <div className="col-span-3 row-span-2 border p-5"></div>
+        <div className="col-span-3 row-span-2 border p-5"></div>
+        <div className="col-span-3 row-span-2 border p-5"></div>
+        <div className="col-span-9 row-span-2 border p-5"></div>
+        <div className="col-span-3 row-span-1 border p-5"></div>
+        <div className="col-span-9 row-span-3 border p-5"></div>
+        <div className="col-span-3 row-span-1 border p-5"></div>
+        <div className="col-span-3 row-span-1 border p-5"></div>
       </div>
     </div>
   );
