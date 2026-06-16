@@ -4,9 +4,13 @@ import { FriendsContext } from "./FriendContext";
 const FriendsContextProvider = ({ children }) => {
   const [fnd, setFnd] = useState([]);
   const handleClick = (fd, str) => {
-    fd.event = str;
-    setFnd([...fnd, fd]);
+  const newEntry = {
+    ...fd,
+    event: str,
   };
+
+  setFnd([...fnd, newEntry]);
+};
   const data = {
     fnd,
     setFnd,

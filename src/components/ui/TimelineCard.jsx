@@ -1,16 +1,14 @@
-import { LuVideo } from "react-icons/lu";
-import { PiChatDotsBold, PiPhoneCallBold } from "react-icons/pi";
 
 const TimelineCard = ({ fd }) => {
   return (
     <div className="p-4 shadow-sm rounded-lg flex items-center gap-4 bg-white">
       <div>
         {fd.event === "call" ? (
-          <PiPhoneCallBold size={30} />
+          <img className="w-8" src="/call.png" alt={fd.name}/>
         ) : fd.event === "text" ? (
-          <PiChatDotsBold size={30} />
+          <img className="w-8" src="/text.png" alt={fd.name}/>
         ) : (
-          <LuVideo size={30} />
+          <img className="w-8" src="/video.png" alt={fd.name}/>
         )}
       </div>
       <div>
