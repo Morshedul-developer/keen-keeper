@@ -5,8 +5,11 @@ import { RiDeleteBinLine, RiNotificationSnoozeLine } from "react-icons/ri";
 import { FiArchive } from "react-icons/fi";
 import { PiChatDotsBold, PiPhoneCallBold } from "react-icons/pi";
 import { LuVideo } from "react-icons/lu";
+import { useContext } from "react";
+import { FriendsContext } from "../../context/FriendContext";
 
 const FriendDetails = () => {
+  const {fnd, setFnd} = useContext(FriendsContext);
   const { friendId } = useParams();
   const { friends, loading } = useFriends();
   const expectedFriend = friends.find(
@@ -19,6 +22,10 @@ const FriendDetails = () => {
       </div>
     );
   }
+  const handleClick = (fd) => {
+    setFnd([...fnd, fd])
+  }
+  console.log(fnd);
   return (
     <div className="bg-[#F8FAFC] py-10 md:py-20">
       <div className="max-w-6xl mx-auto grid grid-cols-12 grid-rows-7 gap-6">
@@ -93,7 +100,7 @@ const FriendDetails = () => {
         <div className="col-span-9 row-span-3 shadow-sm rounded-lg p-6 space-y-4">
           <p className="text-xl font-semibold">Quick Check-In</p>
           <div className="grid grid-cols-3 gap-4">
-            <button className="btn h-32 flex-col bg-[#F8FAFC] hover:bg-[#E2E8F0] text-[16px] gap-2">
+            <button onClick={() => handleClick(expectedFriend)} className="btn h-32 flex-col bg-[#F8FAFC] hover:bg-[#E2E8F0] text-[16px] gap-2">
               <PiPhoneCallBold size={30} />
               Call
             </button>
