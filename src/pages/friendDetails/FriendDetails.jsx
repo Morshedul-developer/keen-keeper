@@ -10,13 +10,13 @@ import { FriendsContext } from "../../context/FriendContext";
 import ErrorPage from "../errorPage/ErrorPage";
 
 const FriendDetails = () => {
-  const {handleClick} = useContext(FriendsContext);
+  const { handleClick } = useContext(FriendsContext);
   const { friendId } = useParams();
   const { friends, loading } = useFriends();
   const expectedFriend = friends.find(
     (friend) => String(friend.id) === friendId,
   );
-  
+
   if (loading) {
     return (
       <div className="flex justify-center items-center h-50">
@@ -24,10 +24,10 @@ const FriendDetails = () => {
       </div>
     );
   }
-  if(!expectedFriend) {
-    return <ErrorPage/>
+  if (!expectedFriend) {
+    return <ErrorPage />;
   }
-  
+
   return (
     <div className="bg-[#F8FAFC] py-10 md:py-20">
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 xl:grid-rows-7 gap-6">
@@ -102,15 +102,24 @@ const FriendDetails = () => {
         <div className="col-span-1 md:col-span-6 xl:col-span-9 xl:row-span-3 shadow-sm rounded-lg p-6 space-y-4">
           <p className="text-xl font-semibold">Quick Check-In</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <button onClick={() => handleClick(expectedFriend,"call")} className="btn h-32 flex-col bg-[#F8FAFC] hover:bg-[#E2E8F0] text-[16px] gap-2">
+            <button
+              onClick={() => handleClick(expectedFriend, "call")}
+              className="btn h-32 flex-col bg-[#F8FAFC] hover:bg-[#E2E8F0] text-[16px] gap-2"
+            >
               <PiPhoneCallBold size={30} />
               Call
             </button>
-            <button onClick={() => handleClick(expectedFriend,"text")} className="btn h-32 flex-col bg-[#F8FAFC] hover:bg-[#E2E8F0] text-[16px] gap-2">
+            <button
+              onClick={() => handleClick(expectedFriend, "text")}
+              className="btn h-32 flex-col bg-[#F8FAFC] hover:bg-[#E2E8F0] text-[16px] gap-2"
+            >
               <PiChatDotsBold size={30} />
               Text
             </button>
-            <button onClick={() => handleClick(expectedFriend,"video")} className="btn h-32 flex-col bg-[#F8FAFC] hover:bg-[#E2E8F0] text-[16px] gap-2">
+            <button
+              onClick={() => handleClick(expectedFriend, "video")}
+              className="btn h-32 flex-col bg-[#F8FAFC] hover:bg-[#E2E8F0] text-[16px] gap-2"
+            >
               <LuVideo size={30} />
               Video
             </button>
@@ -120,7 +129,7 @@ const FriendDetails = () => {
           <FiArchive size={17} />
           Archive
         </button>
-        <button className="btn col-span-1 md:col-span-3 xl:col-span-3 xl:row-span-1 min-h-16 xl:h-full text-[16px] bg-[#F8FAFC] hover:bg-[#E2E8F0] gap-2">
+        <button className="btn btn-outline border-red-500 text-red-500 col-span-1 md:col-span-3 xl:col-span-3 xl:row-span-1 min-h-16 xl:h-full text-[16px] bg-[#F8FAFC] hover:bg-red-500 hover:text-white hover:border-red-500 gap-2">
           <RiDeleteBinLine size={20} />
           Delete
         </button>
