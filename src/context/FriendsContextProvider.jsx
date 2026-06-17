@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FriendsContext } from "./FriendContext";
+import { toast } from "react-toastify";
 
 const FriendsContextProvider = ({ children }) => {
   const [fnd, setFnd] = useState([]);
@@ -10,6 +11,9 @@ const FriendsContextProvider = ({ children }) => {
   };
 
   setFnd([...fnd, newEntry]);
+  if(str === "call"){
+    toast("Succeed")
+  }
 };
   const data = {
     fnd,
