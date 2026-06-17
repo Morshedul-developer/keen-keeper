@@ -7,6 +7,7 @@ import { PiChatDotsBold, PiPhoneCallBold } from "react-icons/pi";
 import { LuVideo } from "react-icons/lu";
 import { useContext } from "react";
 import { FriendsContext } from "../../context/FriendContext";
+import ErrorPage from "../errorPage/ErrorPage";
 
 const FriendDetails = () => {
   const {handleClick} = useContext(FriendsContext);
@@ -15,12 +16,16 @@ const FriendDetails = () => {
   const expectedFriend = friends.find(
     (friend) => String(friend.id) === friendId,
   );
+  
   if (loading) {
     return (
       <div className="flex justify-center items-center h-50">
         <ClipLoader color="#25ee26" />
       </div>
     );
+  }
+  if(!expectedFriend) {
+    return <ErrorPage/>
   }
   
   return (
