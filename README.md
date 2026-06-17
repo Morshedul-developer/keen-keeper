@@ -1,16 +1,30 @@
-# React + Vite
+# Keen Keeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive single-page web application built with React and Vite, featuring interactive data visualizations and a clean, dashboard-style interface.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-06B6D4?logo=tailwindcss&logoColor=white)
+![DaisyUI](https://img.shields.io/badge/DaisyUI-5-5A0EF8)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📖 Description
 
-## React Compiler
+**Keen Keeper** is a fast, modern front-end application built on top of React 19 and Vite. It combines clean UI components with dynamic charting to deliver a smooth, dashboard-style user experience — complete with client-side routing, toast notifications, and loading states for a polished feel across every screen.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Used
 
-## Expanding the ESLint configuration
+| Category | Tech |
+|---|---|
+| Library | React 19 |
+| Build Tool | Vite |
+| Styling | Tailwind CSS, DaisyUI |
+| Routing | React Router |
+| Data Visualization | Recharts |
+| UI Feedback | React Toastify (notifications), React Spinners (loaders) |
+| Icons | React Icons |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features
+
+- **Interactive Data Visualization** — Dynamic charts and graphs powered by Recharts make data easy to read and understand at a glance.
+- **Seamless Multi-Page Navigation** — Smooth, client-side routing with React Router for a fast, app-like browsing experience.
+- **Polished, Responsive UI** — A clean interface styled with Tailwind CSS and DaisyUI, enhanced with toast notifications and loading spinners for clear user feedback on every action.
