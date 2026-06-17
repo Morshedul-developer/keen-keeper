@@ -8,6 +8,9 @@ const TimeLine = () => {
   useEffect(() => {
     setNewList(fnd);
   }, [fnd]);
+  const handleAll = () => {
+    setNewList(fnd);
+  };
   const handleCall = () => {
     const calledItems = fnd.filter((fd) => fd.event === "call");
     setNewList(calledItems);
@@ -28,12 +31,14 @@ const TimeLine = () => {
           defaultValue="Filter timeline"
           className="select appearance-none"
           onChange={(e) => {
-            if (e.target.value === "Call") handleCall();
+            if (e.target.value === "All Activities") handleAll();
+            else if (e.target.value === "Call") handleCall();
             else if (e.target.value === "Text") handleText();
             else if (e.target.value === "Video") handleVideo();
           }}
         >
           <option disabled={true}>Filter timeline</option>
+          <option>All Activities</option>
           <option>Call</option>
           <option>Text</option>
           <option>Video</option>

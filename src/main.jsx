@@ -10,7 +10,8 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
       <FriendsContextProvider>
         <ToastContainer
-        position="top-center" />
+        position="top-center"
+        autoClose={2000} />
         <RouterProvider router={router} />
       </FriendsContextProvider>
   </StrictMode>,
