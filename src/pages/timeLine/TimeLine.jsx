@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { FriendsContext } from "../../context/FriendContext";
 import TimelineCard from "../../components/ui/TimelineCard";
+import { FiInbox } from "react-icons/fi";
 
 const TimeLine = () => {
   const { fnd } = useContext(FriendsContext);
@@ -44,7 +45,19 @@ const TimeLine = () => {
           <option>Video</option>
         </select>
         {newList.length === 0 ? (
-          <h2>There is no data</h2>
+          <div className="bg-white rounded-xl shadow-sm border border-[#E2E8F0] p-12 text-center">
+            <div className="text-5xl mb-4 text-[#244D3F] flex justify-center">
+              <FiInbox />
+            </div>
+
+            <h2 className="text-3xl font-bold text-[#244D3F] mb-2">
+              No Activities Found
+            </h2>
+
+            <p className="text-[#64748B]">
+              Try selecting a different filter or add a new interaction.
+            </p>
+          </div>
         ) : (
           newList.map((fd, index) => <TimelineCard key={index} fd={fd} />)
         )}
