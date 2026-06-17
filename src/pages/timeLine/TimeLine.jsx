@@ -1,20 +1,24 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FriendsContext } from "../../context/FriendContext";
 import TimelineCard from "../../components/ui/TimelineCard";
 
 const TimeLine = () => {
-  const { fnd, setFnd } = useContext(FriendsContext);
+  const { fnd } = useContext(FriendsContext);
+  const [newList, setNewList] = useState(fnd);
+  useEffect(() => {
+    setNewList(fnd);
+  }, [fnd]);
   const handleCall = () => {
     const calledItems = fnd.filter((fd) => fd.event === "call");
-    setFnd(calledItems);
+    setNewList(calledItems);
   };
   const handleText = () => {
     const calledItems = fnd.filter((fd) => fd.event === "text");
-    setFnd(calledItems);
+    setNewList(calledItems);
   };
   const handleVideo = () => {
     const calledItems = fnd.filter((fd) => fd.event === "video");
-    setFnd(calledItems);
+    setNewList(calledItems);
   };
   return (
     <div className="bg-[#F8FAFC] py-10 md:py-20">
@@ -34,9 +38,11 @@ const TimeLine = () => {
           <option>Text</option>
           <option>Video</option>
         </select>
-        {fnd.map((fd, index) => (
-          <TimelineCard key={index} fd={fd} />
-        ))}
+        {newList.length === 0 ? (
+          <h2>There is no data</h2>
+        ) : (
+          newList.map((fd, index) => <TimelineCard key={index} fd={fd} />)
+        )}
       </div>
     </div>
   );
